@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/skynetclock/static/css/main.18190398.css",
+    "main.js": "/skynetclock/static/js/main.05fe931f.js",
+    "index.html": "/skynetclock/index.html",
+    "main.18190398.css.map": "/skynetclock/static/css/main.18190398.css.map",
+    "main.05fe931f.js.map": "/skynetclock/static/js/main.05fe931f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.18190398.css",
+    "static/js/main.05fe931f.js"
+  ]
+}
