@@ -38,7 +38,7 @@ const Navbar = () => {
   ));
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white overflow-hidden px-4 py-8">
             {/* <div className="pb-40">
       {!timerComponents.length ? null : (
           <div className="text-4xl font-bold text-blue-500 animate-pulse flex items-center">
@@ -48,7 +48,7 @@ const Navbar = () => {
         )}
       </div> */}
       <div className="relative flex items-center">
-        <h1 className="text-6xl font-bold mb-12 inset-0 bg-blue">
+        <h1 className="text-6xl sm:text-6xl font-bold mb-12 inset-0 bg-blue">
           SkynetClock
         </h1>
       </div>
@@ -61,7 +61,7 @@ const Navbar = () => {
       </div> */}
       <div className="flex justify-center items-center mb-12">
         {timerComponents.length ? timerComponents : (
-          <div className="text-4xl font-bold text-red-500 animate-pulse flex items-center">
+          <div className="text-4xl sm:text-4xl font-bold text-red-500 animate-pulse flex items-center">
             <AlertCircle className="mr-2" />
             System Offline
           </div>
