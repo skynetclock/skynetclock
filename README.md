@@ -1,2 +1,0 @@
-# skynetclock
- Skynet Clock
