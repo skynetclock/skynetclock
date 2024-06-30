@@ -47,11 +47,12 @@ const Navbar = () => {
           </div>
         )}
       </div> */}
-      <div className="relative">
+      <div className="relative flex items-center">
         <h1 className="text-6xl font-bold mb-12 inset-0 bg-blue">
           SkynetClock
         </h1>
       </div>
+
       {/* <div className="w-64 h-2 bg-gray-700 rounded-full overflow-hidden">
         <div 
           className="h-full bg-gradient-to-r from-white to-blue-500 transition-all duration-1000 ease-out"
@@ -83,11 +84,19 @@ const Navbar = () => {
           ></div>
         ))}
       </div>
-      <div className="pt-20">
+      {/* <div className="pt-20 flex items-center">
         <p className="text-xl mb-8">Job losses, poverty and desperation are coming.</p>
+      </div> */}
+      <div className="pt-20 relative flex items-center">
+        <p className="text-sm">AI, job losses, poverty and desperation are coming.</p>
       </div>
+      <div className="flex items-center">
+      <p className="text-sm mb-8">sayonara@skynetclock.com</p> 
+      </div>
+      
     </div>
   );
 };
+
 
 export default Navbar;
