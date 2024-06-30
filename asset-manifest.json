@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/skynetclock/static/css/main.59ac8578.css",
-    "main.js": "/skynetclock/static/js/main.9eec958b.js",
+    "main.js": "/skynetclock/static/js/main.3e4bd27f.js",
     "static/js/215.a4c12be1.chunk.js": "/skynetclock/static/js/215.a4c12be1.chunk.js",
     "index.html": "/skynetclock/index.html",
     "main.59ac8578.css.map": "/skynetclock/static/css/main.59ac8578.css.map",
-    "main.9eec958b.js.map": "/skynetclock/static/js/main.9eec958b.js.map",
+    "main.3e4bd27f.js.map": "/skynetclock/static/js/main.3e4bd27f.js.map",
     "215.a4c12be1.chunk.js.map": "/skynetclock/static/js/215.a4c12be1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.59ac8578.css",
-    "static/js/main.9eec958b.js"
+    "static/js/main.3e4bd27f.js"
   ]
 }
