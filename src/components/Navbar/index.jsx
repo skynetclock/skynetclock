@@ -38,8 +38,8 @@ const Navbar = () => {
   ));
 
   return (
-    <div className="bg-gray-900 overflow-hidden px-4">
-      <div className="flex flex-col items-center justify-center min-h-screen text-white">
+
+      <div className="flex flex-col items-center justify-center min-h-screen text-white bg-gray-900 overflow-hidden px-4 py-4">
 
         <div className="relative flex items-center">
           <h1 className="text-5xl sm:text-4xl font-bold mb-8 inset-0 text-white">
@@ -100,7 +100,7 @@ const Navbar = () => {
       </div> */}
         {/* <div className="mt-8 text-sm text-gray-400">System Integration Progress</div> */}
       </div>
-    </div>
+
   );
 };
 
