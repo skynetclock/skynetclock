@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { AlertCircle, Binary } from 'lucide-react';
+import { AlertCircle, DatabaseZap } from 'lucide-react';
 
 const Navbar = () => {
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
@@ -30,7 +30,7 @@ const Navbar = () => {
 
   const timerComponents = ['days', 'hours', 'minutes', 'seconds'].map(interval => (
     <div key={interval} className="flex flex-col items-center mx-4">
-      <div className="text-5xl font-bold mb-2 text-cyan-400">
+      <div className="text-4xl font-bold mb-1 text-cyan-400">
         {String(timeLeft[interval]).padStart(2, '0')}
       </div>
       <div className="text-sm uppercase text-gray-400">{interval}</div>
@@ -38,62 +38,68 @@ const Navbar = () => {
   ));
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white overflow-hidden px-4 py-8">
-            {/* <div className="pb-40">
-      {!timerComponents.length ? null : (
-          <div className="text-4xl font-bold text-blue-500 animate-pulse flex items-center">
-            <Binary className="mr-2" />
-            System Online
-          </div>
-        )}
-      </div> */}
-      <div className="relative flex items-center">
-        <h1 className="text-6xl sm:text-6xl font-bold mb-12 inset-0 bg-blue">
-          SkynetClock
-        </h1>
-      </div>
+    <div className="bg-gray-900 overflow-hidden px-4">
+      <div className="flex flex-col items-center justify-center min-h-screen text-white">
 
-      {/* <div className="w-64 h-2 bg-gray-700 rounded-full overflow-hidden">
+        <div className="relative flex items-center">
+          <h1 className="text-5xl sm:text-4xl font-bold mb-8 inset-0 text-white">
+            SkynetClock
+          </h1>
+        </div>
+
+        <div className="flex justify-center items-center mb-12 px-4">
+          {timerComponents.length ? timerComponents : (
+            <div className="text-3xl sm:text-3xl font-bold text-red-500 animate-pulse flex items-center">
+              <AlertCircle className="mr-2" />
+              System Offline
+            </div>
+          )}
+        </div>
+
+        <div>
+          {!timerComponents.length ? (
+            <div className="pb-4 text-xl font-bold text-red-500 animate-pulse flex items-center">
+              <AlertCircle className="mr-2" />
+              System Offline
+            </div>
+          ) : (
+            <div>
+              <div className="pb-4 text-xl font-bold text-blue-500 flex items-center  text-blue-500 animate-pulse">
+                <DatabaseZap className="mr-2" />
+                System Online
+              </div>
+              <div className="mt-2 flex space-x-2">
+                {[...Array(8)].map((_, index) => (
+                  <div
+                    key={index}
+                    className="w-3 h-3 rounded-full bg-blue-500 animate-ping"
+                    style={{ animationDelay: `${index * 0.1}s` }}
+                  ></div>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+        
+        
+
+        <div className="pt-16 relative flex items-center">
+          <p className="text-xs">The automation of your job is in progress.</p>
+        </div>
+
+        <div className="pt-2 flex items-center">
+          <p className="text-xs mb-8">sayonara@skynetclock.com</p>
+        </div>
+
+        {/* <p className="text-xl mb-8">Countdown to AI Activation: May 17, 2026</p> */}
+        {/* <div className="w-64 h-2 bg-gray-700 rounded-full overflow-hidden">
         <div 
           className="h-full bg-gradient-to-r from-white to-blue-500 transition-all duration-1000 ease-out"
           style={{ width: `${(1 - (timeLeft.days / 365)) * 100}%` }}
         ></div>
       </div> */}
-      <div className="flex justify-center items-center mb-12">
-        {timerComponents.length ? timerComponents : (
-          <div className="text-4xl sm:text-4xl font-bold text-red-500 animate-pulse flex items-center">
-            <AlertCircle className="mr-2" />
-            System Offline
-          </div>
-        )}
+        {/* <div className="mt-8 text-sm text-gray-400">System Integration Progress</div> */}
       </div>
-      {/* <p className="text-xl mb-8">Countdown to AI Activation: May 17, 2026</p> */}
-      {/* <div className="w-64 h-2 bg-gray-700 rounded-full overflow-hidden">
-        <div 
-          className="h-full bg-gradient-to-r from-white to-blue-500 transition-all duration-1000 ease-out"
-          style={{ width: `${(1 - (timeLeft.days / 365)) * 100}%` }}
-        ></div>
-      </div> */}
-      {/* <div className="mt-8 text-sm text-gray-400">System Integration Progress</div> */}
-      <div className="mt-12 flex space-x-2">
-        {[...Array(8)].map((_, index) => (
-          <div 
-            key={index}
-            className="w-3 h-3 rounded-full bg-blue-500 animate-ping"
-            style={{ animationDelay: `${index * 0.1}s` }}
-          ></div>
-        ))}
-      </div>
-      {/* <div className="pt-20 flex items-center">
-        <p className="text-xl mb-8">Job losses, poverty and desperation are coming.</p>
-      </div> */}
-      <div className="pt-20 relative flex items-center">
-        <p className="text-sm">AI, job losses, poverty and desperation are coming.</p>
-      </div>
-      <div className="flex items-center">
-      <p className="text-sm mb-8">sayonara@skynetclock.com</p> 
-      </div>
-      
     </div>
   );
 };
