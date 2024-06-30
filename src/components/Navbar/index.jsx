@@ -38,7 +38,6 @@ const Navbar = () => {
   ));
 
   return (
-
       <div className="flex flex-col items-center justify-center min-h-screen text-white bg-gray-900 overflow-hidden px-4 py-4">
 
         <div className="relative flex items-center">
